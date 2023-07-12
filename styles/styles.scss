@@ -1,0 +1,143 @@
+@import 'variables';
+@import 'funciones';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0 110px;
+}
+
+header {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    h2 {
+        font-size: 30px;
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+    }
+}
+
+section {
+    &.container-1 {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 55px;
+            line-height: 70px;
+            letter-spacing: 10px;
+            position: relative;
+
+            &::before {
+                 @include cuadrito ($bg-primary, 215px, 42px, -1px);
+            }
+
+        }
+
+        p {
+            color: $color-primary;
+            line-height: 30px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &.buttons {
+                display: flex;
+                flex-direction: row;
+
+
+                button {
+                    @include button-style(black, $bg-primary, 1px dashed, 20px, 30px, 5px);
+                }
+            }
+
+        }
+    }
+
+    img {
+        width: 500px;
+    }
+}
+
+
+section.container-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    article {
+        width: 280px;
+        background-color: $bg-secondary;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-left: 20px;
+        min-height: 245px;
+
+        h4 {
+            position: relative;
+            z-index: 2;
+            margin-top: 8px;
+
+            &::before {
+                @include cuadrito ($bg-primary, 16px, 9px, 0);
+            }
+        }
+
+    }
+}
+
+.numbers {
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -3px 0px 0px 1px rgb(3, 250, 238);
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 70px;
+
+    .icons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+       
+        i {
+            @extend .numbers;
+            margin-top: 0;
+            border: none;
+        }
+    }
+}

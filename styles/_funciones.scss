@@ -1,0 +1,17 @@
+@mixin button-style ($color, $backround, $border, $top-buttom, $sides, $border-radius){
+    background-color: $backround;
+    color: $color;
+    border: $border;
+    padding: $top-buttom $sides;
+    border-radius: $border-radius;
+}
+
+@mixin cuadrito ($bg-color, $width, $height, $left){
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: $bg-color;
+    width: $width;
+    height: $height;
+    left: $left;
+}

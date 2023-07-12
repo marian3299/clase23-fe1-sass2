@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0 110px;
+}
+
+header {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+header h2 {
+  font-size: 30px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+section.container-1 {
+  display: flex;
+  justify-content: space-between;
+}
+section.container-1 h2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 55px;
+  line-height: 70px;
+  letter-spacing: 10px;
+  position: relative;
+}
+section.container-1 h2::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #03FAEE;
+  width: 215px;
+  height: 42px;
+  left: -1px;
+}
+section.container-1 p {
+  color: #8b8b8b;
+  line-height: 30px;
+}
+section.container-1 div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+section.container-1 div.buttons {
+  display: flex;
+  flex-direction: row;
+}
+section.container-1 div.buttons button {
+  background-color: #03FAEE;
+  color: black;
+  border: 1px dashed;
+  padding: 20px 30px;
+  border-radius: 5px;
+}
+section img {
+  width: 500px;
+}
+
+section.container-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+section.container-2 article {
+  width: 280px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: 20px;
+  min-height: 245px;
+}
+section.container-2 article h4 {
+  position: relative;
+  z-index: 2;
+  margin-top: 8px;
+}
+section.container-2 article h4::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #03FAEE;
+  width: 16px;
+  height: 9px;
+  left: 0;
+}
+
+.numbers, footer .icons i {
+  border: 1px solid black;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -3px 0px 0px 1px rgb(3, 250, 238);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 70px;
+}
+footer .icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+footer .icons i {
+  margin-top: 0;
+  border: none;
+}/*# sourceMappingURL=styles.css.map */
